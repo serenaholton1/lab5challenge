@@ -10,6 +10,26 @@ diamonds = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 hearts = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 
+# Loop through Clubs
+for rank in clubs
+  puts "#{rank} of Clubs"
+end
+
+# Loop through Diamonds
+for rank in diamonds
+  puts "#{rank} of Diamonds"
+end
+
+# Loop through Hearts
+for rank in hearts
+  puts "#{rank} of Hearts"
+end
+
+# Loop through Spades
+for rank in spades
+  puts "#{rank} of Spades"
+end
+
 # Sample output:
 # 2 of Clubs
 # 3 of Clubs
@@ -26,6 +46,31 @@ spades = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "Jack", "Queen", "King", "Ace"]
 suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 
+for suit in suits  
+    for rank in ranks 
+      puts "#{rank} of #{suit}"
+    end
+end
+
+
 # CHALLENGE #2
 # Deal a poker hand. Shuffle the deck and "deal" (i.e. display) a 5 card hand (i.e. 5 cards from the deck).
 # You will want to look at the documentation for Arrays: https://ruby-doc.org/core-2.7.0/Array.html
+
+deck = []
+
+for suit in suits
+  for rank in ranks
+    deck.push("#{rank} of #{suit}")
+  end
+end
+
+
+shuffled_deck = deck.shuffle
+
+hand = shuffled_deck.first(5)
+
+puts "Your hand is:"
+for card in hand
+  puts card
+end
