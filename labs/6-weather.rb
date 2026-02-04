@@ -49,7 +49,7 @@ for day in weather_data[:forecast]
 
   if precip >0.5 && conditions !="Rainy"
     chance = (precip * 100).to_i
-    display_string = display_string + "with a #{chance}% of rain"
+    display_string = display_string + " with a #{chance}% of rain"
   end
 
   puts display_string
